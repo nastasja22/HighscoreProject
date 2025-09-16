@@ -1,4 +1,4 @@
-﻿namespace HighscoreProj
+﻿namespace HighscoreProject.Console
 {
     internal class Program
     {

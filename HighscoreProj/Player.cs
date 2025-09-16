@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HighscoreProj
+namespace HighscoreProject.Console
 {
     public class Player
     {
@@ -15,7 +15,7 @@ namespace HighscoreProj
 
         public Player(string firstname, string lastName, string username, string email, int password)
         {
-            this.firstName = firstname;
+            firstName = firstname;
             this.lastName = lastName;
             this.username = username;
             this.email = email;
