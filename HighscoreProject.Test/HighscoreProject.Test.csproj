@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\HighscoreProj\HighscoreProject.Console.csproj" />
+    <ProjectReference Include="..\HighscoreProject.Console\HighscoreProject.Console.csproj" />
   </ItemGroup>
 
   <ItemGroup>
