@@ -8,17 +8,14 @@ namespace HighscoreProject.Console
 {
     public class Highscore
     {
-        public Highscore()
-        {
-
-        }
-
         public Highscore(int score)
         {
-            this.score = score;
+            this.Score = score;
         }
 
-        private int id;
-        private int score { get; set; }
+        private int Score { get; set; }
+
+        public int High { get; set; }
+
     }
 }

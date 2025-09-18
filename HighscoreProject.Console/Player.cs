@@ -10,12 +10,11 @@ namespace HighscoreProject.Console
     {
         public Player()
         {
-
         }
 
         public Player(string firstname, string lastName, string username, string email, int password)
         {
-            firstName = firstname;
+            this.firstName = firstname;
             this.lastName = lastName;
             this.username = username;
             this.email = email;

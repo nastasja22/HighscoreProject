@@ -8,21 +8,18 @@ namespace HighscoreProject.Console
 {
     public class Game
     {
-        public Game()
-        {
-
-        }
 
         public Game(string title, string genre, string publisher)
         {
-            this.title = title;
-            this.genre = genre;
-            this.publisher = publisher;
+            this.Title = title;
+            this.Genre = genre;
+            this.Publisher = publisher;
         }
 
-        private int id;
-        private string title { get; set; }
-        private string genre { get; set; }
-        private string publisher { get; set; }
+        private string Title { get; set; }
+        private string Genre { get; set; }
+        private string Publisher { get; set; }
+        private DateTime ReleasedAt { get; set; }
+
     }
 }
