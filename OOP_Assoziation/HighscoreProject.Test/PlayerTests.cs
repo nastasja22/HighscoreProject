@@ -63,4 +63,30 @@ public class PlayerTests
         // Assert
         Assert.Throws<ArgumentException>(() => player.SetEmail(email2));
     }
+
+    [Fact]
+    public void GetHighscores_ShouldReturnEmptyList_WhenNoHighscoresAdded()
+    {
+        // Arrange
+        Player player = new Player("John", "Doe", "johndoe", "johndoe1@gmail.com");
+
+        //Assert
+        Assert.Empty(player.GetHighscores());
+    }
+
+    [Fact]
+    public void AddHighscore_ShouldAddHighscoreToPlayer()
+    {
+        // Arrange
+        Player player = new Player("John", "Doe", "johndoe", "johndoe1@gmail.com");
+        Game game = new Game("TestGame", "MMO", "Instinct3", DateTime.Now);
+
+        Highscore highscore = new Highscore(100, game, player, DateTime.Now);
+
+        // Act
+        player.AddHighscore(highscore);
+
+        // Assert
+        Assert.Contains<Highscore>(highscore, player.GetHighscores());
+    }
 }

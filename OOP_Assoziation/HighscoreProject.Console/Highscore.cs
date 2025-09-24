@@ -8,7 +8,7 @@ namespace HighscoreProject.Console
 {
     public class Highscore
     {
-        public Highscore(int score, string game, string player, DateTime date)
+        public Highscore(int score, Game game, Player player, DateTime date)
         {
             this.score = score;
             this.game = game;
@@ -17,8 +17,8 @@ namespace HighscoreProject.Console
         }
 
         private int score;
-        private string game;
-        private string player;
+        private Game game;
+        private Player player;
         private DateTime date;
 
         public int GetScore()
@@ -27,27 +27,11 @@ namespace HighscoreProject.Console
         }
         public void SetScore(int score)
         {
+            if (score < 0)
+            {
+                throw new ArgumentException("Score cannot be negative");
+            }
             this.score = score;
-        }
-
-        public string GetGame()
-        {
-            return this.game;
-        }
-
-        public void SetGame(string game)
-        {
-            this.game = game;
-        }
-
-        public string GetPlayer()
-        {
-            return this.player;
-        }
-
-        public void SetPlayer(string player)
-        {
-            this.player = player;
         }
 
         public DateTime GetDate()
