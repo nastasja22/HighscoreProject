@@ -96,7 +96,7 @@ namespace HighscoreProject.ConsoleApp
         {
             foreach (var highscore in highscores)
             {
-                Console.WriteLine($"Player: {this.username} Score: {highscore.GetScore()}, Date: {highscore.GetDate()}");
+                Console.WriteLine($"Player: {this.username}, Game: {highscore.GetGame().GetTitle()} ,Score: {highscore.GetScore()}, Date: {highscore.GetDate()}");
             }
         }
 

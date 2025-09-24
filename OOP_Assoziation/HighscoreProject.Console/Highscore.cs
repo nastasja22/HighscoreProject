@@ -34,6 +34,23 @@ namespace HighscoreProject.ConsoleApp
             this.score = score;
         }
 
+        public Game GetGame()
+        {
+            return game;
+        }
+        public void SetGame(Game game)
+        {
+            this.game = game;
+        }
+        public Player GetPlayer()
+        {
+            return player;
+        }
+        public void SetPlayer(Player player)
+        {
+            this.player = player;
+        }
+
         public DateTime GetDate()
         {
             return date;
@@ -41,6 +58,12 @@ namespace HighscoreProject.ConsoleApp
         public void SetDate(DateTime date)
         {
             this.date = date;
+        }
+
+
+        public void PrintGameHighscores()
+        {
+            Console.WriteLine($"Highscore: {score}, Game: {game.GetTitle()}, Player: {player.GetUsername()}, Date: {date.ToShortDateString()}");
         }
 
     }

@@ -29,6 +29,8 @@ namespace HighscoreProject.ConsoleApp
 
             player1.PrintAllHighscores();
             player2.PrintAllHighscores();
+
+            
         }
     }
 }
