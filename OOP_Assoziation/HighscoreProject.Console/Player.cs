@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HighscoreProject.Console
+namespace HighscoreProject.ConsoleApp
 {
     public class Player
     {
         public Player(string firstname, string lastName, string username, string email)
         {
-            this.firstName = firstname;
+            firstName = firstname;
             this.lastName = lastName;
             this.username = username;
 
@@ -39,17 +39,17 @@ namespace HighscoreProject.Console
 
         public string GetFirstName()
         {
-            return this.firstName;
+            return firstName;
         }
 
         public void SetFirstName(string firstname)
         {
-            this.firstName = firstname;
+            firstName = firstname;
         }
 
         public string GetLastName()
         {
-            return this.lastName;
+            return lastName;
         }
 
         public void SetLastName(string lastName)
@@ -59,7 +59,7 @@ namespace HighscoreProject.Console
 
         public string GetUsername()
         {
-            return this.username;
+            return username;
         }
 
         public void SetUsername(string username)
@@ -69,7 +69,7 @@ namespace HighscoreProject.Console
 
         public string GetEmail()
         {
-            return this.email;
+            return email;
         }
 
         public void SetEmail(string email)
@@ -84,12 +84,20 @@ namespace HighscoreProject.Console
 
         public List<Highscore> GetHighscores()
         {
-            return this.highscores;
+            return highscores;
         }
 
         public void AddHighscore(Highscore highscore)
         {
-            this.highscores.Add(highscore);
+            highscores.Add(highscore);
+        }
+
+        public void PrintAllHighscores()
+        {
+            foreach (var highscore in highscores)
+            {
+                Console.WriteLine($"Player: {this.username} Score: {highscore.GetScore()}, Date: {highscore.GetDate()}");
+            }
         }
 
         private static bool IsValidEmail(string email)

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HighscoreProject.Console
+namespace HighscoreProject.ConsoleApp
 {
     public class Game
     {
@@ -24,7 +24,7 @@ namespace HighscoreProject.Console
 
         public string GetTitle()
         {
-            return this.title;
+            return title;
         }
 
         public void SetTitle(string title)
@@ -34,7 +34,7 @@ namespace HighscoreProject.Console
 
         public string GetGenre()
         {
-            return this.genre;
+            return genre;
         }
 
         public void SetGenre(string genre)
@@ -44,7 +44,7 @@ namespace HighscoreProject.Console
 
         public string GetPublisher()
         {
-            return this.publisher;
+            return publisher;
         }
 
         public void SetPublisher(string publisher)
@@ -54,7 +54,7 @@ namespace HighscoreProject.Console
 
         public DateTime GetReleasedAt()
         {
-            return this.releasedAt;
+            return releasedAt;
         }
         public void SetReleasedAt(DateTime releasedAt)
         {

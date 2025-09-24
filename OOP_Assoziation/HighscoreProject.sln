@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.36408.4
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HighscoreProject.Console", "HighscoreProject.Console\HighscoreProject.Console.csproj", "{AC49FB6F-ECAB-613B-FED0-FFAEAF2B7B22}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HighscoreProject.ConsoleApp", "HighscoreProject.Console\HighscoreProject.ConsoleApp.csproj", "{AC49FB6F-ECAB-613B-FED0-FFAEAF2B7B22}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HighscoreProject.Test", "HighscoreProject.Test\HighscoreProject.Test.csproj", "{311A6CD7-1697-DA80-E9E5-49EB5E0FF626}"
 EndProject

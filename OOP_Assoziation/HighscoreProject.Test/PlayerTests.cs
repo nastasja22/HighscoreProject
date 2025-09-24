@@ -1,4 +1,4 @@
-using HighscoreProject.Console;
+using HighscoreProject.ConsoleApp;
 using Xunit;
 
 public class PlayerTests

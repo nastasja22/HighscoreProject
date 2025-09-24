@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HighscoreProject.Console
+namespace HighscoreProject.ConsoleApp
 {
     public class Highscore
     {
@@ -23,7 +23,7 @@ namespace HighscoreProject.Console
 
         public int GetScore()
         {
-            return this.score;
+            return score;
         }
         public void SetScore(int score)
         {
@@ -36,7 +36,7 @@ namespace HighscoreProject.Console
 
         public DateTime GetDate()
         {
-            return this.date;
+            return date;
         }
         public void SetDate(DateTime date)
         {
