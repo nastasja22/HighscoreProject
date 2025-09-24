@@ -4,29 +4,63 @@ using Xunit;
 public class PlayerTests
 {
     [Fact]
-    public void DefaultConstructor_CreatesPlayerObject()
+    public void TestPlayerCreation_ValidEmail_ShouldCreatePlayer()
     {
-        // Arrange & Act
-        var player = new Player();
-
+        // Arrange
+        string firstName = "John";
+        string lastName = "Doe";
+        string username = "johndoe";
+        string email = "johndoe1@gmail.com";
+        // Act
+        Player player = new Player(firstName, lastName, username, email);
         // Assert
-        Assert.NotNull(player);
+        Assert.Equal(email, player.GetEmail());
     }
 
     [Fact]
-    public void DefaultConstructor_PropertiesAreDefault()
+    public void TestPlayerCreation_NonValidEmail_ShouldThrowArgumentException()
     {
         // Arrange
-        var player = new Player();
+        string firstName = "John";
+        string lastName = "Doe";
+        string username = "johndoe";
+        string email = "johndoe1gmail.com";
 
-        // Act & Assert
-        // Da die Eigenschaften private sind, können sie hier nicht direkt geprüft werden.
-        // Alternativ könnten Getter hinzugefügt werden, um die Werte zu testen.
-        // Beispiel:
-        // Assert.Null(player.FirstName);
-        // Assert.Null(player.LastName);
-        // Assert.Null(player.Username);
-        // Assert.Null(player.Email);
-        // Assert.Equal(0, player.Password);
+        // Assert
+        Assert.Throws<ArgumentException>(() => new Player(firstName, lastName, username, email));
+    }
+
+    [Fact]
+    public void TestSetEmail_ValidEmail_ShouldUpdateEmail()
+    {
+        // Arrange
+        string firstName = "John";
+        string lastName = "Doe";
+        string username = "johndoe";
+        string email = "johndoe1@gmail.com";
+        string email2 = "johndoe2@gmail.com";
+
+        // Act
+        Player player = new Player(firstName, lastName, username, email);
+
+        player.SetEmail(email2);
+        // Assert
+        Assert.Equal(email2, player.GetEmail());
+    }
+
+    [Fact]
+    public void TestSetEmail_NonValidEmail_ShouldThrowArgumentException()
+    {
+        // Arrange
+        string firstName = "John";
+        string lastName = "Doe";
+        string username = "johndoe";
+        string email = "johndoe1@gmail.com";
+        string email2 = "johndoe2gmail.com";
+
+        Player player = new Player(firstName, lastName, username, email);
+
+        // Assert
+        Assert.Throws<ArgumentException>(() => player.SetEmail(email2));
     }
 }

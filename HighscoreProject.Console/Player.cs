@@ -8,31 +8,78 @@ namespace HighscoreProject.Console
 {
     public class Player
     {
-        public Player()
-        {
-        }
-
-        public Player(string firstname, string lastName, string username, string email, int password)
+        public Player(string firstname, string lastName, string username, string email) 
         {
             this.firstName = firstname;
             this.lastName = lastName;
             this.username = username;
-            this.email = email;
-            this.password = password;
+
+            if (IsValidEmail(email))
+            {
+                this.email = email;
+            }
+            else
+            {
+                throw new ArgumentException("Invalid email format");
+            }
         }
 
-        private int id;
-        private string firstName { get; set; }
-        private string lastName { get; set; }
-        private string username { get; set; }
-        private string email { get; set; }
-        private int password { get; set; }
+        private string firstName;
+        private string lastName;
+        private string username;
+        private string email;
+
+        public string GetFirstName()
+        {
+            return this.firstName;
+        }
+
+        public void SetFirstName(string firstname)
+        {
+            this.firstName = firstname;
+        }
+
+        public string GetLastName()
+        {
+            return this.lastName;
+        }
+
+        public void SetLastName(string lastName)
+        {
+            this.lastName = lastName;
+        }
+
+        public string GetUsername()
+        {
+            return this.username;
+        }
+
+        public void SetUsername(string username)
+        {
+            this.username = username;
+        }
+
+        public string GetEmail()
+        {
+            return this.email;
+        }
+
+        public void SetEmail(string email)
+        {
+            if (IsValidEmail(email))
+            {
+                this.email = email;
+            }
+            else
+            {
+                throw new ArgumentException("Invalid email format");
+            }
+        }
 
         public bool IsValidEmail(string email)
         {
             if (email.Contains("@"))
             {
-                this.email = email;
                 return true;
             }
             else
