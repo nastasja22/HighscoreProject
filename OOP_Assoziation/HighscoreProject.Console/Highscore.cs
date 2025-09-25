@@ -63,7 +63,7 @@ namespace HighscoreProject.ConsoleApp
 
         public void PrintGameHighscores()
         {
-            Console.WriteLine($"Highscore: {score}, Game: {game.GetTitle()}, Player: {player.GetUsername()}, Date: {date.ToShortDateString()}");
+            Console.WriteLine($"Game: {game.GetTitle()}, Player: {player.GetUsername()},Highscore: {score}, Date: {date.ToShortDateString()}");
         }
 
     }

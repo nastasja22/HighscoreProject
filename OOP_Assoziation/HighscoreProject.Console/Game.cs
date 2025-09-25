@@ -21,6 +21,7 @@ namespace HighscoreProject.ConsoleApp
         private string genre;
         private string publisher;
         private DateTime releasedAt;
+        private List<Highscore> highscores = new List<Highscore>();
 
         public string GetTitle()
         {
@@ -61,7 +62,14 @@ namespace HighscoreProject.ConsoleApp
             this.releasedAt = releasedAt;
         }
 
+        public List<Highscore> GetHighscores()
+        {
+            return this.highscores;
+        }
 
-
+        public void AddHighscore(Highscore highscore)
+        {
+            highscores.Add(highscore);
+        }
     }
 }

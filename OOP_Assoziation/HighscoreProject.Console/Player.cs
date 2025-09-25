@@ -33,7 +33,8 @@ namespace HighscoreProject.ConsoleApp
         private string lastName;
         private string username;
         private string email;
-        //Variante 1 to initialize the list
+        //Variante 1 to initiali
+        //ze the list
         //List must be initialized to avoid null reference exceptions => can be done in constructor as well
         private List<Highscore> highscores = new List<Highscore>();
 
@@ -97,6 +98,17 @@ namespace HighscoreProject.ConsoleApp
             foreach (var highscore in highscores)
             {
                 Console.WriteLine($"Player: {this.username}, Game: {highscore.GetGame().GetTitle()} ,Score: {highscore.GetScore()}, Date: {highscore.GetDate()}");
+            }
+        }
+
+        public void PrintGameHighscores(Game game)
+        {
+            foreach (var highscore in highscores)
+            {
+                if (highscore.GetGame().GetTitle() == game.GetTitle())
+                {
+                    Console.WriteLine($"Player: {this.username}, Game: {highscore.GetGame().GetTitle()} ,Score: {highscore.GetScore()}, Date: {highscore.GetDate()}");
+                }
             }
         }
 
