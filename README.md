@@ -1,5 +1,5 @@
 ´´´mermaid
-@startuml
+
 
 enum DruckerTyp {
   LASERDRUCKER
@@ -42,5 +42,5 @@ Arbeitsplatz "1" --> "0..1" Drucker
 Arbeitsplatz "1" --> "1" Mitarbeiter
 Mitarbeiter "n" --> "1" Abteilung
 
-@enduml
+
 ´´´
